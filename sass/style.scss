@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.banner {
+    position: relative;
+    height: 40vh;
+    background-image: url('../assets/space-2543838_1920.jpg');
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 40px;
+        color: white;
+    }
+}
+
+.menu {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+
+    &__list {
+        display: flex;
+        width: 100%;
+        list-style: none;
+    }
+
+    &__item {
+        flex-grow: 1;
+
+        &+& {
+            border-left: 1px solid white;
+        }
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.788);
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        height: 10vh;
+        text-align: center;
+        line-height: 10vh;
+        transition: 0.5s;
+
+
+        &:hover ::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 10%;
+            background: linear-gradient(45deg, rgba(115, 14, 186, 1) 14%, rgba(18, 235, 217, 1) 94%);
+        }
+
+        &.active {
+            color: rgb(95, 196, 255);
+        }
+
+        .fas {
+            padding: 5px;
+        }
+    }
+}
+
+
+.section1 {
+    height: 50vh;
+    background-color: cadetblue;
+
+}
+
+.section2 {
+    height: 80vh;
+    background-color: gray;
+}
+
+.section3 {
+    height: 120vh;
+    background-color: brown;
+}
+
+.section4 {
+    height: 130vh;
+    background-color: green;
+}
+
+.section5 {
+    height: 80vh;
+    background-color: royalblue;
+}
+
+footer {
+    height: 50vh;
+    background-color: black;
+}
+
+p {
+    text-align: center;
+    color: white;
+    padding-top: 15vh;
+}
